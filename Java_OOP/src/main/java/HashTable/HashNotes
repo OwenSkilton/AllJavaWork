@@ -1,0 +1,66 @@
+                                HASH TABLE
+
+ - Hash table and an array are both structures that allow you to
+   store and retrieve data
+
+ - Both allow you to specify an index and retrieve a value associated with it
+
+ - Difference is that the indicies of an array are sequential
+   while a hash table are based on the value of the data associated
+   with them
+
+   =================================================
+        Array           Hash table
+    Key ¦ Value ¦       Key ¦ Value ¦
+    -------------       -------------
+     0  ¦  Yeet ¦       Mike¦ Yeet  ¦
+     1  ¦  Yoot ¦       Owen¦ Yoot  ¦
+     2  ¦  Yort ¦        Tim¦ Yort  ¦
+     3  ¦  Yonk ¦       Boii¦ Yonk  ¦
+
+ - Can provide efficient way to search items in large data amounts
+ - Particularly data that is not otherwise easily searchable
+    - Large means FUCKING ENORMOUS. Long time to preform sequential search
+
+ - Any non-null object can be used as a key or value
+ - HashTable similar to HashMap except it is synchronized
+
+                                HashMap
+
+ - HashMap is a Map based collection used for storing key & value pairs.
+ - Denoted as:
+    - HashMap<Key, Value> or
+    - HashMap<K, V>
+ - Similar to HashTable class except that it is unsynchronized and
+   permits nulls ( one null key and multiple values)
+
+                          Comparing Two Objects
+
+ - Java Object class provides 2 important methods to compare 2 objects:
+    - equals()
+    &
+    - hashCode()
+ - When we override the equals() method, it is necessary to override the hashCode() method
+ - Hashcode() method states that equal objects must have equal hashcodes
+
+ - equals():
+    - Compares the equality of 2 objects
+    - Will be equal if they share the same memory address
+
+Difference between == operator and equals Method:
+
+ - == operator compares that 2 references are identical or not
+ - Where as equals() compares 2 objects
+ - Object are equal when they have the same state (usually comparing variables)
+
+
+                          Java HashCode() Method
+
+ - Hash code is a 32-bit signed integer value
+ - Unique ID provided by JVM to java object
+ - Each Java object is associated with the hash code
+ - Hash code is managed by hash-based data =structure, HashTable, HashSet, etc
+ - Syntax:
+    - public int hashcode()
+ - Returns randomly generated hash code value of the object that is unique for each instance
+ - Value may change during several executions of program

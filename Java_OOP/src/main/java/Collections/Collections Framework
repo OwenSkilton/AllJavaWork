@@ -1,0 +1,90 @@
+                                COLLECTIONS FRAMEWORK
+
+ - Collections framework = sophisticated hierarchy of interfaces and classes used for managing grouped of objects
+ - Java collections Framework standardises the way in which groups of objects are handled by java programs
+ - Designed to meet several goals:
+    - 1. Framework had to be high performance
+    - 2. Had to allow different types of collections to work in a similar manner and with a high degree of interoperability
+    - 3. extending and/or adapting a collection had to be easy
+
+
+ - 3 main types of collection in the collections API, all defined via interfaces:
+    - List: an ordered collection of objects, and allows duplicate elements
+    - Set: collection of unique elements that may  or may not be sorted
+    - Map: set of key / value pairs, allows fast lookup ofg values via the key
+
+=============================
+ - Primitives = fundamental data type that cannot be broken down into a simpler term. Integer, string.
+ - Array not a primitive as contains other data types
+=============================
+ - Collections can only hold objects (not primitives), size doesn't need to be specified in advance, they grow as new data is added
+
+ - Interfaces that underpin collections are summarized below:
+    - Collection: Able to work with groups of objects; top of the hierarchy
+    - Deque: Extends Queue to handle a double-ended queue
+    - List: Extend collection to handle sequences (list of objects)
+    - NavigableSet: Extends SortedSet to handle retrieval of elements based on closest-match searches
+    - Queue: Extends collection to handle special lists in which elements are removed only from the head (FILO)
+    - Set: Extends collection to handle sets, must contain unique elements
+    - SortedSet: Extends set to handle sorted sets
+
+****************************************************
+Lecture 11 slide 5 for methods defined by collection
+****************************************************
+
+                                ArrayList Class
+
+ - ArrayList class extends AbstractList and implements the List interface
+ - ArrayList = generic class:
+    - class ArrayList<E>
+    - E specifies the type of objects that the list will hold
+ - ArrayList supports dynamic arrays that can grow
+
+ - Can increase ArrayList manually by calling ensureCapacity().
+ - Can reduce ArrayList manually by calling trimToSize().
+
+Java Iterator:
+
+ - Iterator = way to loop through collections.
+
+ Create an Array from an ArrayList:
+
+ - Do this by calling toArray()
+
+                                HashSet Class
+
+ - Extends AbstractSet
+ - Creates collection that uses a hash table for storage
+ - Declaration:
+    - class HashSet<E>
+ - E specifies the type of objects that the set will hold
+
+ - Hash table stores info by 'hashing'
+ - Informational content of a key is used to determine a unique value. A hash code
+ - Hash code si the used as the index which at which the data linked with the key is stored
+ - Transformation of te key into its hash code is automatic
+ - Code can't directly index the hash table
+
+                                LinkedHashSet Class
+
+ - LinkedHashSet class extends HashSet and adds no member of its own
+ - Generic class, declaration:
+    - class LinkedHashSet<E>
+ - LinkedHashSet keeps a linked list of the series in the order they were entered
+ - Allows insertion-order iteration over the set:
+    - When cyucling through using an iterator,
+      the elements will be returned in the order the were inserted
+
+                                TreeSet Class
+
+ - Creates a collection that uses a tree for storage
+ - Objects are stored, ascending order
+ - Access and retrieval times are fast
+ - Generic class, declaration:
+     - class TreeSet<E>
+
+                                ArrayDeque Class
+
+ - Creates a dynamic array and has no capacity restrictions
+ - Generic class, declaration:
+     - class ArrayDeque<E>

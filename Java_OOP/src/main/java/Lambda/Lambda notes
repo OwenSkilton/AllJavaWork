@@ -1,0 +1,13 @@
+                                Lambda functions
+
+ - Arrow functions
+ - Easy to type functions with a condition and an output
+ - Anonymous functions
+ - Left side = params
+ - right side = actions
+ - The arrow -> can be verbalised as 'becomes' or 'goes to'
+
+ - Single line lambdas are known as expression lambdas
+ - Multiline support variables, loops, if etc and require a return statement
+
+ - Able to be generic if the title of the interface contains <T>

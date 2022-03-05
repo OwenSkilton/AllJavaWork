@@ -1,0 +1,55 @@
+                    Intro
+
+Java preforms input / output through streams
+Stream = abstraction that either produces or consumes info
+Stream is linked to physical device by java I/O system
+
+Input stream can abstract many different kind of inputs: disk, file, keyboard etc
+Output as well: disk, file, console
+Java implements streams within class hierarchies defined in the Java.io package
+
+                    Streams
+
+***** 2 types of streams: byte & character *****
+
+    Byte streams useful for handling I/O of bytes (reading / writing of binary)
+
+    Character streams used for I/O of characters. They use Unicode so can be internationalised
+
+Preferred method for reading from a console = character oriented stream.
+To read from a BufferedReader use 'read()'. Looks like "int read() throws IOException"
+When 'read()' is called, each character is returned as an integer values.
+Returns -1 when end of the stream.
+
+                    IOException
+
+The method in CharacterBufferReader within 'Input_output.java' reads all the characters entered using 'read()' until q is entered
+Any I/O exceptions are thrown out of main()
+Have the option to handle these errors our selves if we wish
+
+                    Reading Strings
+
+To read strings from the keyboard, use 'readLine()' that is a member of the BufferedReader class.
+Normally in form: "String readLine() throws IOException". StringBufferReader shows this and exits when 'stop' is entered.
+Tiny editor is an example of reading using the 'readLine()' method and storing the values within a array of size 100
+
+                    Files
+
+Used as source + destination for data.
+Within 'Input_output.java', the 'ReadFromFile' method uses the bytes.txt file as an input stream.
+'content = fis.read()' converts the characters read into their associated integer value.
+'File F = new File('...')' Defines the files location.
+'FileInputStream' can accept a String representing the file location.
+However, its worth encapsulating this in the File object as it gives access to a bunch of util methods.
+
+After the catch block there is a finally block that closes the FileInputStream.
+Best practice to close it regardless of if the method completed successfully, an error may have occurred during the read.
+
+
+
+
+
+
+
+
+

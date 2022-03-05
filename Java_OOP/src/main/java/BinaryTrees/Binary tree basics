@@ -1,0 +1,67 @@
+                BINARY TREES:
+
+ - Similar to a topic in further maths cant remember the name.
+ - Start at a root node and then the branches that come off then have children
+
+EXAMPLE:
+
+ - Create a binary tree and add the following nodes from an unordered list:
+
+ - 50, "Vice Chancellor“
+ - 25, "Dean of Faculty"
+ - 15, "Faculty Manager”
+ - 30, "Faculty Secretary"
+ - 18, "Another Faculty Manager“
+ - 75, "Head of School"
+ - 80, "Senior Lecturer“
+ - 2, "Building Manager"
+ - 16, "Library Manager“
+
+  ANSWER:                           NOTES:
+
+              50                    - 50 is the root node so start at top
+       25 === 50                    - 25 < 50 so goes on the left
+       25 === 50                    - 15 < 25 so goes on the left as a new child
+       ¦                            - Continue down the list in this algorithmic manner until completion
+       15
+
+       ...
+       ...
+       ...
+
+  Final List:
+
+                50
+               /  \
+              25  75
+             /  \   \
+            15  30   80
+           /  \
+          2   18
+              /
+             16
+
+
+    EFFICIENT TREE STRUCTURES:
+
+ - Search, insert, delete items quickly in a tree data structure
+ - Ordered arrays less efficient for insertions and deletions
+ - Searching in linked list = slow
+ - Time required to perform operations = order of O(log N)
+ - GENERALLY a tree = more efficient if you need to carry many different types of operation
+
+
+            BINARY TREE DELETE NODE:
+
+ - Binary tree node deletion has 3 cases:
+
+ 1. If node has no leftChild and no rightChild:
+    - Delete it directly
+ 2. If there is only one child note:
+    - Child node replaces current node
+    - Delete current node
+ 3. If there are 2 child nodes:
+    - Replace the current node with the smallest node from the right subtree:
+    - Smallest node on the right is also larger than the value on the left
+
+

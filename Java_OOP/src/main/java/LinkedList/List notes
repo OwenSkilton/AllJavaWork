@@ -1,0 +1,158 @@
+                                    Linked lists
+
+Linked list = a dynamic data structure where each element (called a node) has 2 items:
+
+    - The data
+    - A pointer to the next node
+
+A linked list is a collection of nodes where each node is connected to the next node through a pointer
+
+Implementation using a linked list structure works for unlimited number of values
+Therefore no need to fix the size like an array
+The linked list implementation can organise as many data values as required, subject to memory size
+
+                                    Operations
+
+Define 3 classes to represent:
+
+    - Node structure
+    - Linked list manager:
+        - Add operation
+        - Insert operation
+        - Delete operation
+        - Displaying linked list data members
+    - Main operation
+
+Steps for creation:
+
+    - Step 1:
+        Node class, Define a 'Node' structure with 2 members data & next
+    - Step 2:
+        Define 3 node pointers:
+            - head: the first element in the linked list
+            - tail: the last element in the linked list
+            - listItemNode to add elements to the linked list
+        Create methods for add, insert, delete, display
+    - Step 3:
+        Implement the main method by making suitable Add, Insert, Delete and display stack calls
+
+                                    ADD
+
+Use the following steps to add a new node into the linked list:
+
+    - IF (Linked list id empty)
+        - head Node receives the data value
+        - head Node.next references the tail node
+
+    - ELSE IF (tail.data equals null)
+        - tail Node receives the data
+        - tail.next equals null
+
+    - ELSE
+        - listItemNode = new Node(value,null)
+        - tail.next = listItemNode
+        - tail = listItemNode
+
+                                    INSERT
+
+Use the following steps to insert a new node into the linked list:
+
+    - STEP 1:
+        Create a variable of type Node and assign it to point at the head Node
+            - Node p = head;
+        Create a counter variable to track the insertion point of the new Node
+            - int i = 0;
+    - STEP 2:
+        Use a while loop to move through the nodes by use of the next reference until the insertion point
+            - p = p.next
+    - STEP 3:
+        Create a new Node and set its next value to the current pointer p next value
+            - newNode.next = p.next
+        Set the value of the current Nodes next value to point at the inserted node
+            - p.next = newNode
+
+                                    DELETE
+
+Use the following steps to delete a new node into the linked list:
+
+    - STEP 1:
+        Create a variable of type Node and assign it to point at the head Node
+            - Node p = head;
+        Create a counter variable to track the insertion point of the new Node
+            - int i =0;
+    - STEP 2:
+        Use a while loop to move through the Nodes by use of the next reference until you reach the deletion point
+            - p = p.next
+    - STEP 3:
+        Create a new Node variable temp and set its value to the current pointer p next value
+            - Node temp = p.next
+        Set the value of the current Node p next value to point at the next but one node
+            - p.next = p.next.next
+        Set the value of the temp Nodes next value to null. Which in effect deletes the node form the list
+            - temp.next = null
+
+                             DISPLAYING A LINKED LIST
+
+    - STEP 1:
+        Create a variable of type Node and assign it to point at the head Node
+            - Node p =head;
+        Use the following loop to display the elements (nodes) of a stack
+            - while(p != null) {
+                System.out.print(p.data + "->");
+                p = p.next
+            }
+
+
+><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+##################################################################################################################################
+¦--------------------------------------------------------------------------------------------------------------------------------¦
+##################################################################################################################################
+><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+
+                                LIST STRUCTURES:
+
+    - Typical Linked List structures:
+        - Lists
+        - Circular lists
+        - Stacks
+        - Queues
+        - Double Linked Lists
+        - Trees
+        - Binary trees
+
+Stack data structure definition:
+    - stack is a linear data structure that is used to store the collection of objects
+    - Based off of Last-in-First-Out (LIFO)
+    - Push operation inserts an element into the stack.
+    - Pop operation removes an element from the top of the stack
+
+Problem of array based stacks:
+    - Fixed number of values
+    - Amount of data needs to be specified during construction
+    - Linked Lists are more efficient
+
+LIST STRUCTURES AVAILABLE:
+
+    - Linked List stack structure:
+        - Every new element is inserted as the 'top' element
+        - New insert pointed as 'top'
+        - If we want to remove the node which is pointed by 'top' by moving 'top' to its previous node in list
+        - The 'next field' of the first element in (the bottom element), must always be null
+
+    - Queue data structure:
+        - Same as a supper market
+        - Take from the top, insert into the bottom
+
+    - Circular linked list:
+        - Final element points to the first element
+        - Circular motion of flow
+
+
+
+
+
+
+
+
+
